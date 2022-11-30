@@ -4,7 +4,7 @@
 // c) automobilio nuvažiuotas kelias metrais (!), pvz.: 5000
 // d) automobilio sugaištas laikas sekundėmis (!), pvz.: 118
 // Suskaičiuokite automobilio greitį kilometrais per valandą (!) ir kartu su pradiniais
-// duomenimis išveskite į html lentelę.
+// duomenimis išveskite į html.
 // Pasinaudokite document.getElementById() funkcija gauti html elementą ir to
 // elemento .innerHTML.
 // ✶) Sugalvokite kaip galima būtų gražiau išvesti paskaičiuotą automobilio greitį rodant tik
@@ -18,14 +18,29 @@ console.log(masyvas);
 var kelias = masyvas[2];
 var laikas = masyvas[3];
 var greitis = kelias / laikas;
-var greitisKMH = (greitis *360) / 100;
+var greitisKmh = (greitis *360) / 100;
 
 console.log('kelias: ' + kelias + 'm');
 console.log('laikas: '+ laikas + 's');
 
 console.log('greitis: ' + greitis + ' m/s');
-console.log('greitis km/h: ' + greitisKMH + ' km/h');
+console.log('greitis km/h: ' + greitisKmh + ' km/h');
 
 // apvalinimas
 console.log('greitis suapvalinus: ' + Math.round(greitis) + ' m/s');
-console.log('greitis suapvalinus km/h: ' + Math.round(greitisKMH) + ' km/h');
+console.log('greitis suapvalinus km/h: ' + Math.round(greitisKmh) + ' km/h');
+
+var atstumasDiv = document.getElementById('atstumas');
+atstumasDiv.innerHTML = kelias + ' m'; 
+
+var laikasDiv = document.getElementById('laikas');
+laikasDiv.innerHTML = laikas + ' s'; 
+
+var greitisDiv = document.getElementById('greitis');
+greitisDiv.innerHTML = greitis + ' m/s'; 
+
+var greitisApDiv = document.getElementById('greitisAp');
+greitisApDiv.innerHTML = Math.round(greitis) + ' m/s'; 
+
+var greitisApKmhDiv = document.getElementById('greitisApKmh');
+greitisApKmhDiv.innerHTML = Math.round(greitisKmh) + ' km/h'; 
