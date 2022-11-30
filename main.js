@@ -10,3 +10,22 @@
 // ✶) Sugalvokite kaip galima būtų gražiau išvesti paskaičiuotą automobilio greitį rodant tik
 // sveikus skaičius, t.y. ne 152.54237…, o 153.
 
+
+var masyvas = ['2017-07-06 19:59:45', 'LRS123', '5000', 118];
+
+console.log(masyvas);
+
+var kelias = masyvas[2];
+var laikas = masyvas[3];
+var greitis = kelias / laikas;
+var greitisKMH = (greitis *360) / 100;
+
+console.log('kelias: ' + kelias + 'm');
+console.log('laikas: '+ laikas + 's');
+
+console.log('greitis: ' + greitis + ' m/s');
+console.log('greitis km/h: ' + greitisKMH + ' km/h');
+
+// apvalinimas
+console.log('greitis suapvalinus: ' + Math.round(greitis) + ' m/s');
+console.log('greitis suapvalinus km/h: ' + Math.round(greitisKMH) + ' km/h');
